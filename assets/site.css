@@ -134,6 +134,9 @@ main section + section { border-top: 1px solid var(--line); }
 /* Grids */
 .grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }
 .grid > * { min-width: 0; }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 880px) { .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .grid-3 { grid-template-columns: minmax(0, 1fr); } }
 .point { display: grid; gap: 0.5rem; align-content: start; }
 .point p { color: var(--muted); }
 .point h3 { font-size: 1.15rem; }
